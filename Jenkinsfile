@@ -8,8 +8,11 @@ pipeline {
     }
 
     stage("post-proc") {
-        archiveArtifacts artifacts: 'artifacts/*.log'
-        junit 'artifacts/xunit.xml'
+        steps {
+            
+            archiveArtifacts artifacts: 'artifacts/*.log'
+            junit 'artifacts/xunit.xml'
+        }
     }
      
     }
