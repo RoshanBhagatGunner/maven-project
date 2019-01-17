@@ -2,7 +2,8 @@ pipeline {
     agent any
     stages{
         stage('Performance Tests') {
-            bzt "test.yml -report -o settings.artifacts-dir=artifacts"
+            steps {
+                sh "bzt test.yml -report -o settings.artifacts-dir=artifacts"
     }
 
     stage("post-proc") {
