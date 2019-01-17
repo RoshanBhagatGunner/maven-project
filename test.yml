@@ -21,8 +21,7 @@ scenarios:
       body:
         fromPort: Paris
         toPort: Buenos Aires
- modules:
-   consolidator:
+
 
 
 reporting:
