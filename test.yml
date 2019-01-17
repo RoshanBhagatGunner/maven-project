@@ -21,39 +21,7 @@ scenarios:
       body:
         fromPort: Paris
         toPort: Buenos Aires
-modules:
-  jmeter:
-    path: #/Users/rbhagat/Documents/apache-jmeter-5.0/bin/jmeter
-    download-link: https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-{version}.zip
-    version: 5.0
-    detect-plugins: true
-    plugins:
-        - jpgc-json=2.2
-        - jmeter-ftp
-        - jpgc-casutg
-    class: bzt.modules.jmeter.JMeterExecutor
-  consolidator:
-    generalize-labels: false  # replace digits and UUID sequences
-    # with N and U to decrease label count
-    ignore-labels: # sample labels from this list
-      # will be ignored by results reader
-      - ignore
-    buffer-seconds: 2  # this buffer is used to wait
-    # for complete data within a second
-    class: bzt.modules.aggregator.ConsolidatingAggregator
-    percentiles:  # percentile levels to track,
-      # 0 also means min, 100 also means max
-      - 0.0
-      - 50.0
-      - 90.0
-      - 95.0
-      - 99.0
-      - 99.9
-      - 100.0
-  monitoring:
-    class: bzt.modules.monitoring.Monitoring
-  local:
-    class: bzt.modules.provisioning.Local
+
 
 reporting:
 - module: passfail
