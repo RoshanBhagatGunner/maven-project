@@ -21,6 +21,11 @@ scenarios:
       body:
         fromPort: Paris
         toPort: Buenos Aires
+modules:
+  jmeter:
+    download-link: https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-{version}.zip
+    version: 3.3
+    detect-plugins: true
 
 reporting:
 - module: passfail
