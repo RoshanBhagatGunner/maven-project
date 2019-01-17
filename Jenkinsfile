@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages{
+        /*
         stage('Build'){
             steps {
                 sh 'mvn clean package'
@@ -36,6 +37,17 @@ pipeline {
                     echo ' Deployment failed.'
                 }
             }
+        }*/
+        
+    stage('Build') {
+        steps {
+            sh 'bzt test.yml
         }
     }
+    
+     
+    }
+    
+    
+      
 }
