@@ -22,7 +22,9 @@ scenarios:
         fromPort: Paris
         toPort: Buenos Aires
 
-
+modules:
+  consolidator:
+    generalize-labels: false 
 
 reporting:
 - module: passfail
