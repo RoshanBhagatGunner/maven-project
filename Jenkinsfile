@@ -41,7 +41,7 @@ pipeline {
         
     stage('Build') {
         steps {
-            sh 'bzt test.yml
+            sh 'bzt test.yml'
         }
     }
     
