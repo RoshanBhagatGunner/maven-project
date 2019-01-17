@@ -25,6 +25,7 @@ scenarios:
 modules:
   consolidator:
     generalize-labels: false 
+    class: bzt.modules.aggregator.ConsolidatingAggregator
 
 reporting:
 - module: passfail
