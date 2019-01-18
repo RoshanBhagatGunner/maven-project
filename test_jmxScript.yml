@@ -1,0 +1,6 @@
+execution:
+- scenario: simple
+
+scenarios:
+  simple:
+    script: URL_Signing_Serv_Perf.jmx
