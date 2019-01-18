@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Performance Tests') {
             steps {
-                sh "bzt test.yml -report -o settings.artifacts-dir=artifacts"
+                sh "bzt test_jmxScript.yml -report -o settings.artifacts-dir=artifacts"
             }
     }
 
